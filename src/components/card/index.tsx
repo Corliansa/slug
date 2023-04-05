@@ -47,16 +47,14 @@ const Card = (props: CardProps) => {
             className="text-xl text-gray-100 transition-all hover:text-gray-300"
             target="_blank"
             rel="noreferrer"
-            href={`https://slug.vercel.app/s/${props.slug}`}
+            href={`https://dlx.pw/${props.slug}`}
           >
-            /s/{props.slug}
+            /{props.slug}
           </a>
           <IconButton
             icon={<BiCopy />}
             className="ml-1 p-1 text-gray-500 transition-colors duration-200 hover:text-gray-200"
-            onClick={() =>
-              copyToClipboard(`https://slug.vercel.app/s/${props.slug}`)
-            }
+            onClick={() => copyToClipboard(`https://dlx.pw/${props.slug}`)}
           />
         </div>
         <p className="mb-2 text-gray-500">{props.url}</p>
@@ -70,9 +68,7 @@ const Card = (props: CardProps) => {
         >
           <DropdownItem
             icon={<BiCopy size={17} />}
-            onClick={() =>
-              copyToClipboard(`https://slug.vercel.app/s/${props.slug}`)
-            }
+            onClick={() => copyToClipboard(`https://dlx.pw/${props.slug}`)}
           >
             Copy
           </DropdownItem>
@@ -87,7 +83,7 @@ const Card = (props: CardProps) => {
           </DropdownItem>
         </Dropdown>
         <Modal
-          title={`Edit: /s/${props.slug}`}
+          title={`Edit: /${props.slug}`}
           open={editModal}
           close={handleEditModal}
         >
@@ -99,7 +95,7 @@ const Card = (props: CardProps) => {
           />
         </Modal>
         <Modal
-          title={`Delete: /s/${props.slug}`}
+          title={`Delete: /${props.slug}`}
           open={deleteModal}
           close={handleDeleteModal}
         >

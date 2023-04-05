@@ -35,7 +35,8 @@ const Create = () => {
       setLoading(false);
       setError("slug", {
         type: "manual",
-        message: "Slug already exists. Please try another one or click 'Randomize' button.",
+        message:
+          "Slug already exists. Please try another one or click 'Randomize' button.",
       });
     },
   });
@@ -89,7 +90,7 @@ const Create = () => {
       </div>
       <div className="mb-5">
         <label htmlFor="slug">Custom slug:</label>
-        <p className="text-gray-500">https://slug.vercel.app/s/</p>
+        <p className="text-gray-500">https://dlx.pw/</p>
         <div className="mt-1 flex items-center justify-between">
           <input
             id="slug"

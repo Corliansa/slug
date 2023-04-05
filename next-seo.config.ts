@@ -1,8 +1,7 @@
 export default {
   title: "URL Shortener",
   titleTemplate: "%s - slug",
-  description:
-    "A URL shortener built with T3 Stack",
+  description: "A URL shortener built with T3 Stack",
   defaultTitle: "slug",
   additionalLinkTags: [
     {
@@ -38,7 +37,7 @@ export default {
   ],
   openGraph: {
     site_name: "slug",
-    url: "https://slug.vercel.app/",
+    url: "https://dlx.pw/",
     type: "website",
     locale: "en_IE",
     images: [
