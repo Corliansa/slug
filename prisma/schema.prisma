@@ -3,13 +3,13 @@ generator client {
 }
 
 datasource db {
-    provider = "mysql"
+    provider = "cockroachdb"
     url      = env("DATABASE_URL")
 }
 
-model link {
-    id          Int      @id @default(autoincrement())
-    url         String   @db.Text
+model Link {
+    id          String   @id @default(cuid())
+    url         String //@db.Text
     slug        String   @unique
     description String?
     createdAt   DateTime @default(now())
@@ -17,6 +17,7 @@ model link {
     creatorId   String
 
     @@index(slug)
+    @@map("links")
 }
 
 model Account {
@@ -35,6 +36,7 @@ model Account {
     user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
     @@unique([provider, providerAccountId])
+    @@map("accounts")
 }
 
 model Session {
@@ -43,6 +45,8 @@ model Session {
     userId       String
     expires      DateTime
     user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@map("sessions")
 }
 
 model User {
@@ -54,7 +58,9 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
-    links         link[]
+    links         Link[]
+
+    @@map("users")
 }
 
 model VerificationToken {
@@ -63,4 +69,5 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+    @@map("verification_tokens")
 }
