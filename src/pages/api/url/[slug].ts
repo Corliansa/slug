@@ -6,8 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (!slug || typeof slug !== "string") {
     return res.status(400).json({
-      error:
-        "[X] Error: Missing slug? Remember that urls start like this: /u/yourLink",
+      error: "Error: Invalid slug.",
     });
   }
 
@@ -22,12 +21,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (!data) {
     return res.status(404).json({
       error:
-        "[X] Error: Link not found or removed. Go to dlx.pw and create a new link.",
+        "Error: Link not found or removed. Go to dlx.pw and create a new link.",
     });
   }
 
   // Cache:
   res.setHeader("Cache-Control", "s-maxage=1000000, stale-while-revalidate");
 
-  return res.json(data);
+  return res.redirect(data.url);
 };

@@ -19,4 +19,14 @@ export default defineNextConfig({
     locales: ["en"],
     defaultLocale: "en",
   },
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: "/:path*",
+          destination: "/api/url/:path*",
+        },
+      ],
+    };
+  },
 });
