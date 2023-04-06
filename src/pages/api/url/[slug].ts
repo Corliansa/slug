@@ -21,7 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (!data) {
     return res.status(404).json({
       error:
-        "Error: Link not found or removed. Go to dlx.pw and create a new link.",
+        "Error: Link not found or removed. Go to dashboard and create a new link.",
     });
   }
 

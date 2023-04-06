@@ -47,14 +47,16 @@ const Card = (props: CardProps) => {
             className="text-xl text-gray-100 transition-all hover:text-gray-300"
             target="_blank"
             rel="noreferrer"
-            href={`https://dlx.pw/${props.slug}`}
+            href={`/${props.slug}`}
           >
             /{props.slug}
           </a>
           <IconButton
             icon={<BiCopy />}
             className="ml-1 p-1 text-gray-500 transition-colors duration-200 hover:text-gray-200"
-            onClick={() => copyToClipboard(`https://dlx.pw/${props.slug}`)}
+            onClick={() =>
+              copyToClipboard(`${window.location.host}/${props.slug}`)
+            }
           />
         </div>
         <p className="mb-2 text-gray-500">{props.url}</p>
@@ -68,7 +70,9 @@ const Card = (props: CardProps) => {
         >
           <DropdownItem
             icon={<BiCopy size={17} />}
-            onClick={() => copyToClipboard(`https://dlx.pw/${props.slug}`)}
+            onClick={() =>
+              copyToClipboard(`${window.location.host}/${props.slug}`)
+            }
           >
             Copy
           </DropdownItem>
