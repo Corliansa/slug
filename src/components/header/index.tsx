@@ -10,12 +10,12 @@ const Header = () => {
         <Link href="/">
           <div className="flex cursor-pointer items-center text-white transition-all hover:text-gray-300">
             <Image src="/img/logo.png" alt="Logo" width={32} height={32} />
-            <h1 className="ml-2 mr-2 text-xl">slug</h1>
+            <h1 className="ml-2 mr-2 text-xl">Slug</h1>
           </div>
         </Link>
         <div className="flex items-center space-x-6">
           <Auth />
-          <CommandMenu />
+          {/* <CommandMenu /> */}
         </div>
       </div>
     </header>

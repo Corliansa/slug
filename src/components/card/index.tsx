@@ -87,7 +87,7 @@ const Card = (props: CardProps) => {
           </DropdownItem>
         </Dropdown>
         <Modal
-          title={`Edit: /${props.slug}`}
+          title={`Edit /${props.slug}`}
           open={editModal}
           close={handleEditModal}
         >
@@ -99,7 +99,7 @@ const Card = (props: CardProps) => {
           />
         </Modal>
         <Modal
-          title={`Delete: /${props.slug}`}
+          title={`Delete /${props.slug}`}
           open={deleteModal}
           close={handleDeleteModal}
         >

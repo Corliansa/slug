@@ -1,6 +1,6 @@
 export default {
   title: "URL Shortener",
-  titleTemplate: "%s | slug",
+  titleTemplate: "%s | Slug",
   description: "A simple URL shortener.",
   defaultTitle: "slug",
   additionalLinkTags: [
