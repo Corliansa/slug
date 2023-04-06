@@ -10,7 +10,7 @@ import { BiCheck } from "react-icons/bi";
 import { toastStyles } from "@/styles/toast";
 
 interface EditProps {
-  id: number;
+  id: string;
   slug: string;
   url: string;
   description: string;

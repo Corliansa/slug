@@ -10,7 +10,7 @@ import { nanoid } from "nanoid";
 import { toastStyles } from "@/styles/toast";
 
 interface DeleteProps {
-  id: number;
+  id: string;
 }
 
 const Delete = (props: DeleteProps) => {
