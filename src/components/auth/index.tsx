@@ -62,15 +62,6 @@ const Auth = () => {
       <Link href="/dash">
         <DropdownItem icon={<BiBox size={17} />}>Dashboard</DropdownItem>
       </Link>
-      <a
-        href="https://github.com/pheralb/slug/issues/new"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <DropdownItem icon={<BiMessageSquareEdit size={17} />} external={true}>
-          Report a bug
-        </DropdownItem>
-      </a>
       <DropdownItem icon={<BiExit size={17} />} onClick={handleLogout}>
         Sign Out
       </DropdownItem>

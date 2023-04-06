@@ -17,24 +17,6 @@ const data = [
     href: "/dash",
     icon: <BiBox />,
   },
-  {
-    id: 3,
-    name: "Report a bug",
-    href: "https://github.com/pheralb/slug/issues/new",
-    icon: <BiMessageSquareEdit />,
-  },
-  {
-    id: 4,
-    name: "Repository",
-    href: "https://github.com/pheralb/slug",
-    icon: <BsGithub />,
-  },
-  {
-    id: 5,
-    name: "Twitter",
-    href: "https://twitter.com/pheralb_",
-    icon: <BsTwitter />,
-  },
 ];
 
 const CommandMenu = () => {
